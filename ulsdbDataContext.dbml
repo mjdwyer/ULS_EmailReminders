@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="ULS_db1" Class="ulsdbDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=ULS_db1;Persist Security Info=True;User ID=uls2008" SettingsObjectName="ServiceEmailReminders.Properties.Settings" SettingsPropertyName="ULS_db1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.svc_appointments" Member="svc_appointments">
+    <Type Name="svc_appointment">
+      <Column Name="svc_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="svc_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="last_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="first_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="street_address" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="state" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="zip" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="home_phone" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="other_phone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="crew" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reschedule" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="comments" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="foreman_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.svc_contact" Member="svc_contacts">
+    <Type Name="svc_contact">
+      <Column Name="contact_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="contact_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="contact_number" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="contact_email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="notify1_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="notify2_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="notify3_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employee" Member="employees">
+    <Type Name="employee">
+      <Column Name="employeeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="empId" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="suffix" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="empStatus" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="org" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="oqId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ssn" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="address1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="zip" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="homephone" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="cellphone" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="payRate" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="jobClass" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="oparea" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="MVRcheckDt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CBGcheckDt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DandAcheckDt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DandAresult" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="last_updt_dt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="last_updt_uid" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="birthDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DLnum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DLstate" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="DLclass" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DLexpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="medicalCardExpDt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.empQual" Member="empQuals">
+    <Type Name="empQual">
+      <Column Name="employeeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="empId" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="qualId" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="qualDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="qualExpire" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="evaluator" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="qualCompany" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.qual_notification" Member="qual_notifications">
+    <Type Name="qual_notification">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.qualification" Member="qualifications">
+    <Type Name="qualification">
+      <Column Name="qualID" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="qualDesc" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="qualCompany" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
